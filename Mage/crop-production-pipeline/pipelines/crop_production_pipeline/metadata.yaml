@@ -1,0 +1,271 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    dynamic: true
+  downstream_blocks:
+  - load_reference_data
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: load_reference_metadata
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: load_reference_metadata
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    reduce_output: false
+  downstream_blocks:
+  - export_reference_to_datalake
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: load_reference_data
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks:
+  - load_reference_metadata
+  uuid: load_reference_data
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - transformation_reference
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: export_reference_to_datalake
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - load_reference_data
+  uuid: export_reference_to_datalake
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - export_reference_gcs_warehouse
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: transformation_reference
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - export_reference_to_datalake
+  uuid: transformation_reference
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: export_reference_gcs_warehouse
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - transformation_reference
+  uuid: export_reference_gcs_warehouse
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - export_fao_metadata_to_datalake
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: load_fao_metadata
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: load_fao_metadata
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - transformation_fao
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: export_fao_metadata_to_datalake
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - load_fao_metadata
+  uuid: export_fao_metadata_to_datalake
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - export_fao_gcs_to_warehouse
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: transformation_fao
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - export_fao_metadata_to_datalake
+  uuid: transformation_fao
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: export_fao_gcs_to_warehouse
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - transformation_fao
+  uuid: export_fao_gcs_to_warehouse
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - export_production_to_datalake
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: load_production_data
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: load_production_data
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - transformation_production
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: export_production_to_datalake
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - load_production_data
+  uuid: export_production_to_datalake
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - export_production_gcs_to_warehouse
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: transformation_production
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - export_production_to_datalake
+  uuid: transformation_production
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - export_production_cluster
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: export_production_gcs_to_warehouse
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - transformation_production
+  uuid: export_production_gcs_to_warehouse
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    data_provider: bigquery
+    data_provider_profile: default
+    data_provider_schema: crop_production_dataset
+    data_provider_table: crop_production_cluster
+    dbt: {}
+    disable_query_preprocessing: false
+    export_write_policy: append
+    limit: 1000
+    upstream_block_configuration:
+      export_production_gcs_to_warehouse:
+        table_name: crop_production_cluster
+    use_raw_sql: false
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: sql
+  name: export_production_cluster
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - export_production_gcs_to_warehouse
+  uuid: export_production_cluster
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2024-03-31 23:18:54.336193+00:00'
+data_integration: null
+description: null
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: crop-production-pipeline
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: python
+uuid: crop_production_pipeline
+variables_dir: /home/src/mage_data/crop-production-pipeline
+widgets: []
