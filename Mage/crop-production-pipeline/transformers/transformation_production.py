@@ -12,7 +12,10 @@ if 'test' not in globals():
 
 @transformer
 def execute_transformer_action(df: DataFrame, *args, **kwargs) -> DataFrame:
-    
+    metadata = [
+        {"file_name": kwargs["file_name"]}
+    ]
+
     df.columns = (df.columns
         .str.replace(' ', '_')
         .str.lower()      
@@ -22,4 +25,17 @@ def execute_transformer_action(df: DataFrame, *args, **kwargs) -> DataFrame:
     df['item_code'] = df['item_code'].astype(np.int64)
     df['element_code'] = df['element_code'].astype(np.int64)
 
-    return df
+    del_index = set()
+
+    for record in range(len(df)):
+        for i in range(1961, 2020, 1):
+            col_name = f"y{i}f"
+            if df.iloc[record]["y2019f"] == "M":
+                del_index.add(record)
+            elif df.iloc[record][col_name] == "M":
+                continue
+            else:
+                break
+    df.drop(df.index[list(del_index)], inplace=True)
+
+    return [df, metadata]

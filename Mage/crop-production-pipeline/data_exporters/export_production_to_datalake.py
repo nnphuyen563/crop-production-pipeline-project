@@ -11,15 +11,19 @@ if 'data_exporter' not in globals():
 @data_exporter
 def export_data_to_google_cloud_storage(df: DataFrame, **kwargs) -> None:
 
+    metadata = [
+        {"file_name": kwargs["file_name"]}
+    ]
+
     config_path = path.join(get_repo_path(), 'io_config.yaml')
     config_profile = 'default'
 
     bucket_name = 'crop-production-bucket'
-    object_key = 'product_data.csv'
+    object_key = f'product/{kwargs["file_name"]}.csv'
 
     GoogleCloudStorage.with_config(ConfigFileLoader(config_path, config_profile)).export(
         df,
         bucket_name,
         object_key,
     )
-    return df
+    return [df, metadata]

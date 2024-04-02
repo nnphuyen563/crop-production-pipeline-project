@@ -1,0 +1,1 @@
+{"domain_code": "str", "domain": "str", "item_code": "int64", "item": "str", "description": "str", "hs_code": "float64", "hs07_code": "str", "hs12_code": "str", "cpc_code": "str"}

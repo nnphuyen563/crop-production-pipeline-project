@@ -152,6 +152,23 @@ blocks:
   uuid: export_fao_gcs_to_warehouse
 - all_upstream_blocks_executed: true
   color: null
+  configuration:
+    dynamic: true
+  downstream_blocks:
+  - load_production_data
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: load_production_metadata
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: load_production_metadata
+- all_upstream_blocks_executed: true
+  color: null
   configuration: {}
   downstream_blocks:
   - export_production_to_datalake
@@ -164,7 +181,8 @@ blocks:
   status: executed
   timeout: null
   type: data_loader
-  upstream_blocks: []
+  upstream_blocks:
+  - load_production_metadata
   uuid: load_production_data
 - all_upstream_blocks_executed: true
   color: null
@@ -203,8 +221,7 @@ blocks:
 - all_upstream_blocks_executed: true
   color: null
   configuration: {}
-  downstream_blocks:
-  - export_production_cluster
+  downstream_blocks: []
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -217,34 +234,6 @@ blocks:
   upstream_blocks:
   - transformation_production
   uuid: export_production_gcs_to_warehouse
-- all_upstream_blocks_executed: true
-  color: null
-  configuration:
-    data_provider: bigquery
-    data_provider_profile: default
-    data_provider_schema: crop_production_dataset
-    data_provider_table: crop_production_cluster
-    dbt: {}
-    disable_query_preprocessing: false
-    export_write_policy: append
-    limit: 1000
-    upstream_block_configuration:
-      export_production_gcs_to_warehouse:
-        table_name: crop_production_cluster
-    use_raw_sql: false
-  downstream_blocks: []
-  executor_config: null
-  executor_type: local_python
-  has_callback: false
-  language: sql
-  name: export_production_cluster
-  retry_config: null
-  status: executed
-  timeout: null
-  type: data_exporter
-  upstream_blocks:
-  - export_production_gcs_to_warehouse
-  uuid: export_production_cluster
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
