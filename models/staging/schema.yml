@@ -1,0 +1,12 @@
+version: 2
+sources:
+  - name: staging
+    database: crop-production-project
+    schema: crop_production_dataset
+
+    tables:
+      - name: product_americas
+      - name: product_africa
+      - name: product_asia
+      - name: product_europe
+      - name: product_oceania 
