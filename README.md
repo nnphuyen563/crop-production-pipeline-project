@@ -26,7 +26,16 @@ This could help answer questions:
 </ol>
 
 ## Dataset
-Instructions on how to install your project.
+The dataset in which all transformations and analysis will be developed is Crop Production published on Data World. Given that this dataset is in CSV format and largely clean. <br>
+Crop Production dataset contains multiple tables:
+- FAO Metadata
+- Reference
+  - Elements
+  - Flags
+  - Items
+  - Units
+- Production Crops (5 tables for each continent)
+
 
 ## Infrastructure
 Examples and instructions on how to use your project.
