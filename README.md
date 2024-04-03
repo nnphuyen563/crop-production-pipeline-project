@@ -60,7 +60,7 @@ The report is built on top of the data marts created in dbt and shared in Looker
    2. Create Service Account
    - Role: `BigQuery Admin`, `Storage Admin`, `Storage Object Admin`, `Viewer`
    - Create credential key (Json)
-    REMEMBER: enable APIs (BigQuery, credential)
+   - REMEMBER: enable APIs (BigQuery, credential)
 
 2. Connect Google Cloud to local machine and authorize the gcloud CLI
    1. Install gcloud - <a href = "https://cloud.google.com/sdk/docs/install">here</a>
