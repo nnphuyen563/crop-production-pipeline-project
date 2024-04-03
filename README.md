@@ -5,18 +5,27 @@ For more detailed information, you can visit <a href = "https://www.fao.org/faos
 
 ## Table of contents
 
-- [Introduction](#introduction)
-- [Dataset](#dataset)
-- [Infrastructure](#infrastructure)
-- [Dashboard](#dashboard)
-- [Reproducibility](#reproducibility)
-- [Special Thanks](#special-thanks)
+- [Crop Production Pipeline Project 🌏](#crop-production-pipeline-project-)
+  - [Table of contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Dataset](#dataset)
+  - [Infrastructure](#infrastructure)
+  - [Dashboard](#dashboard)
+  - [Reproducibility](#reproducibility)
+  - [Special Thanks](#special-thanks)
 
 ## Introduction
 
-This project aims to provide comprehensive insights into global crop production statistics sourced from the Food and Agriculture Organization of the United Nations (FAO). By ingesting data from <a href = "https://data.world/agriculture/crop-production">Data World</a> and generating <a href = "https://lookerstudio.google.com/reporting/f62e4703-b18e-491c-97f5-c34551975fa4">Crop Production Dashboard</a>, the project will strive to enhance understanding and facilitate informed decision-making.
+This project aims to provide comprehensive insights into global crop production statistics sourced from the Food and Agriculture Organization of the United Nations (FAO). By ingesting data from <a href = "https://data.world/agriculture/crop-production">Data World</a> and generating <a href = "https://lookerstudio.google.com/reporting/f62e4703-b18e-491c-97f5-c34551975fa4">Crop Production Dashboard</a>, the project will strive to enhance understanding and facilitate informed decision-making. <br>
 
+This could help answer questions:
+<ol>
+    <li>What are the top 5 crop items produced in each continent in terms of quantity over the years?</li>
+    <li>How does the proportion of crop production vary across category?</li>
+    <li>What is the geographical distribution of specific crop categories across different areas?</li>
+</ol>
 
+<h3></h3>
 ## Dataset
 Instructions on how to install your project.
 
