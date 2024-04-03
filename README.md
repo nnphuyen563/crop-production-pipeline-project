@@ -13,7 +13,9 @@ For more detailed information, you can visit <a href = "https://www.fao.org/faos
 - [Special Thanks](#special-thanks)
 
 ## Introduction
-Brief introduction to your project.
+
+This project aims to provide comprehensive insights into global crop production statistics sourced from the Food and Agriculture Organization of the United Nations (FAO). By ingesting data from <a href = "https://data.world/agriculture/crop-production">Data World</a> and generating <a href = "https://lookerstudio.google.com/reporting/f62e4703-b18e-491c-97f5-c34551975fa4">Crop Production Dashboard</a>, the project will strive to enhance understanding and facilitate informed decision-making.
+
 
 ## Dataset
 Instructions on how to install your project.
