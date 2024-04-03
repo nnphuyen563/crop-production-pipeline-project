@@ -47,7 +47,7 @@ The following tools and technologies are used:
 - Data Lake - <a href = "https://cloud.google.com/storage?hl=en">Google Cloud Storage</a>
 - Data Warehouse - <a href = "https://cloud.google.com/bigquery?hl=en">BigQuery</a>
 - Data Visualization - <a href = "https://lookerstudio.google.com/">Looker Studio</a>
-<img src="/images/infrastructure.jpg">
+![infrastructure](./images/infrastructure.jpg)
 ## Dashboard
 List of features provided by your project.
 
