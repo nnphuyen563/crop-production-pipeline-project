@@ -53,8 +53,55 @@ The following tools and technologies are used:
 The report is built on top of the data marts created in dbt and shared in Looker Studio. It includes item_group filter to analyze crops. You can take a look into the finished dashoard <a href = "https://lookerstudio.google.com/reporting/f62e4703-b18e-491c-97f5-c34551975fa4">here</a>
 
 ![dashboard](./images/dashboard.png)
+
 ## Reproducibility
-Guidelines.
+1. Config GCP
+   1. Create project in Google Cloud Platform
+   2. Create Service Account
+   - Role: `BigQuery Admin`, `Storage Admin`, `Storage Object Admin`, `Viewer`
+   - Create credential key (Json)
+    REMEMBER: enable APIs (BigQuery, credential)
+
+2. Connect Google Cloud to local machine and authorize the gcloud CLI
+   1. Install gcloud - <a href = "https://cloud.google.com/sdk/docs/install">here</a>
+   2. Authorizing gcloud - <a href = "https://cloud.google.com/sdk/docs/authorizing">here</a>
+   
+3. Config Terraform - <a href = "https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/01-docker-terraform/1_terraform_gcp/terraform/terraform_with_variables">template</a> 
+   1. Add credential keys
+   2. Change `main.tf` and `variables.tf`
+   3. Run commands
+   ```
+    terraform init
+   ```
+   ```
+    terraform plan -var="project=<gcp-project-id>"
+   ```
+   ```
+    terraform apply -var="project=<gcp-project-id>"
+   ```
+
+4. Config docker for Mage - <a href = "https://github.com/mage-ai/mage-zoomcamp">template</a> (You can deploy Mage in Cloud by using Terraform - <a href="https://github.com/mage-ai/mage-ai-terraform-templates">templates</a>)
+   1. Create `Dockerfile`, `docker-compose.yml`, `requirements.txt`, `.env`
+   2. Run docker commands (Open Docker Desktop before run)
+   ```
+    docker compose build
+   ```
+   ```
+    docker compose up
+   ```
+   3. Navigate to `localhost:6789`
+   4. Build data pipeline
+      1. Extract data from API (work with dynamic blocks <a href ="https://docs.mage.ai/design/blocks/dynamic-blocks">here</a>)
+      2. Ingest raw data to datalake
+      3. Preprocessing
+      4. Load data to data warehouse
+   
+![mage](./images/mage.png)
+
+5. Transform with dbt
+![dbt](./images/dbt.jpg)
+
+6. Generate dashboard in Looker Studio
 
 ## Special Thanks
-Information about the license under which your project is distributed.
+A big thank you to <a href = "https://github.com/DataTalksClub">DataTalksClub</a> for their amazing <a href="https://github.com/DataTalksClub/data-engineering-zoomcamp">Data Engineering Zoomcamp</a>! 
