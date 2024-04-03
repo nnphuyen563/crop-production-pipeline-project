@@ -26,7 +26,7 @@ This could help answer questions:
 </ol>
 
 ## Dataset
-The dataset in which all transformations and analysis will be developed is Crop Production published on Data World. Given that this dataset is in CSV format and largely clean. <br>
+The dataset in which all transformations and analysis will be developed is <a href = "https://data.world/agriculture/crop-production">Crop Production</a> published on Data World. Given that this dataset is in CSV format and largely clean. <br>
 
 Crop Production dataset contains multiple tables:
 - FAO Metadata
@@ -37,9 +37,16 @@ Crop Production dataset contains multiple tables:
   - Units
 - Production Crops (5 tables for each continent)
 
-
 ## Infrastructure
-Examples and instructions on how to use your project.
+The following tools and technologies are used:
+- Cloud - <a href = "https://cloud.google.com/?hl=en">Google Cloud Platform</a>
+- Infrastructure as Code - <a href = "https://www.terraform.io/">Terraform</a>
+- Containerization - <a href = "https://www.docker.com/">Docker</a>
+- Orchestration - <a href = "https://www.mage.ai/">Mage</a>
+- Transformation - <a href = "https://cloud.getdbt.com/">dbt</a>
+- Data Lake - <a href = "https://cloud.google.com/storage?hl=en">Google Cloud Storage</a>
+- Data Warehouse - <a href = "https://cloud.google.com/bigquery?hl=en">BigQuery</a>
+- Data Visualization - <a href = "https://lookerstudio.google.com/">Looker Studio</a>
 
 ## Dashboard
 List of features provided by your project.
