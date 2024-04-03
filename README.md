@@ -25,7 +25,6 @@ This could help answer questions:
     <li>What is the geographical distribution of specific crop categories across different areas?</li>
 </ol>
 
-<h3></h3>
 ## Dataset
 Instructions on how to install your project.
 
