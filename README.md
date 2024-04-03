@@ -5,7 +5,6 @@ For more detailed information, you can visit <a href = "https://www.fao.org/faos
 
 ## Table of contents
 
-- [Table of contents](#table-of-contents)
 - [Introduction](#introduction)
 - [Dataset](#dataset)
 - [Infrastructure](#infrastructure)
