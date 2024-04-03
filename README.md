@@ -4,14 +4,14 @@ The Food and Agriculture Organization of the United Nations (FAO) provides compr
 For more detailed information, you can visit <a href = "https://www.fao.org/faostat/en/#data">the FAO website</a> crop statistics.
 
 ## Table of contents
-- [Crop Production Pipeline Project 🌏](#crop-production-pipeline-project-)
-  - [Table of contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Dataset](#dataset)
-  - [Infrastructure](#infrastructure)
-  - [Dashboard](#dashboard)
-  - [Reproducibility](#reproducibility)
-  - [Special Thanks](#special-thanks)
+
+- [Table of contents](#table-of-contents)
+- [Introduction](#introduction)
+- [Dataset](#dataset)
+- [Infrastructure](#infrastructure)
+- [Dashboard](#dashboard)
+- [Reproducibility](#reproducibility)
+- [Special Thanks](#special-thanks)
 
 ## Introduction
 Brief introduction to your project.
