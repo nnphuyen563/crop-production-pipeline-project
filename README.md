@@ -70,6 +70,7 @@ The report is built on top of the data marts created in dbt and shared in Looker
    1. Add credential keys
    2. Change `main.tf` and `variables.tf`
    3. Run commands
+   
    ```
     terraform init
    ```
@@ -83,6 +84,7 @@ The report is built on top of the data marts created in dbt and shared in Looker
 4. Config docker for Mage - <a href = "https://github.com/mage-ai/mage-zoomcamp">template</a> (You can deploy Mage in Cloud by using Terraform - <a href="https://github.com/mage-ai/mage-ai-terraform-templates">templates</a>)
    1. Create `Dockerfile`, `docker-compose.yml`, `requirements.txt`, `.env`
    2. Run docker commands (Open Docker Desktop before run)
+   
    ```
     docker compose build
    ```
@@ -99,6 +101,7 @@ The report is built on top of the data marts created in dbt and shared in Looker
 ![mage](./images/mage.png)
 
 5. Transform with dbt
+
 ![dbt](./images/dbt.jpg)
 
 6. Generate dashboard in Looker Studio
