@@ -1,13 +1,1 @@
-{
-  "type": "service_account",
-  "project_id": "crop-production-project",
-  "private_key_id": "576c87b86f03ac63e0c15c0f530d9bf0225a7003",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCzAxN3Gl7dwX/Y\nJxlDYR5oW2EjOZhTF2IsuZv8lQpMqj8qdszPbNU2i43K/GDXe1vmTLPsTc/zQqU3\ngc6Q5do7wkjPPhJ+oWCdlQMTB9oICs9r/3vZcxr1QoIQ7XEAElEvfynq/GuccPzU\nuaxp2O8Y9DKCHx9TDusAoAc+J2ijwjxbfdJa6mGDOIEPUvbDZfAx82459Q1XgYPd\n2BJUS9ipO4xmrvvhxDlAnZdtMJ94hUdUToJu6jJ4o46ydMSU+AiHNoY29OWchYbE\neW+oFoTH9ZR1M+7fyIkysNp561+kPOObWlzfmMm0BlBAwFIQ53m1Klc4wC/C14zY\n9L3Ho0j1AgMBAAECggEAD+1bIwK2pBZeUJYR+lu+v9w5hU/PjL0M4BvXlB6SnwWa\nvyV4zY/KXKMIB6Jy31k7cP8sFv9JXER2vLyQ63V3+E8t+Tp1nMyw8vRaJKxTKtoD\nYIGHvG4wXNgBCI6HulDm5knzKdQxouauqCKpA3XouBiqEcfBGru+Dv0uB8qr1b4A\n+ViJKhBn08NKxWxr4yZ42l3GSoGVUz1rPU9Tp2uTHizK5pYRWSXrmH5QbTBIvGlz\nSQ0TvXLu7QpHCOkxLl3HjCFAAAZRtZbJKPGY0dZqJEL9tTLAm7AlgEv5kY+l/uPW\nkh1ICpE7xCmnGKcXpoCdmubTeN5IzhzONXX9A5IOAQKBgQD101maYOYV5NtfpRI6\nGi56v7WR3WTH60Y5GIkFicjNidNRcun4wqp/qxpZajjNbQ0I/LgQDbEWx2dbLRFd\nNFppTCMMas04XJ/4OKl/2PYJavrQo3bGXoTOmzMDoIA6BZXb0lPJWg1+nySkKmE3\nhPvnsLr59t1tQ0dpQ349usO6gQKBgQC6a80uEnIlalVK1A0jD+883K31/R+UMWmW\nx3qlwtzYjp46XWb5aM1jbXoR6R8pQAOEm/kbS+aCeJdMGT6b3Hf07xahj9Ff5WPr\n5Xkxu5RjL8wY2gQzxMxvdCwkI7F/3Hm+86mJ019gGAYwOQv7QuW5/ZEygk11hLeB\nka21rPEMdQKBgHRyst5rinLSn4y2QGUfo+bny5YWXzhI3lILqlTiSSn8YQsTOXxq\nkqO5pNi4dcHyJ5ubQ4HvSnU07mQFfFU/iJiaxXuLWD2buve1t61lVF9vuvJ8jLY5\nbgYFBOxx6mwR20RvZNtb+kqCDrRpkvXe3AmL8XaZl5i7pydZHoMVZsSBAoGACxix\nnOVyL/H1Y7/djFG9ftTv8e2APLT4QQZcsZM4zBcpKfY3U+8+EoYItxo2RaFO1Ezo\ndgx9ixSchOYXyPVFmqnEohdKcjfYS8lb/m7Y9VJ6BpyrlV1IgfXbTsdlIGRCRvCA\nDfkr+y9S5vnuUaV4wSprwyLoc29T8P135pGFw6UCgYEAlceXLmJXOchy8oEVW2rK\nrS+O2mg6aVvvan0tUBBK/CFwB9sFyUUCjoTOjIWNgMQVm3Qw9PAtlTs2Yfv5zUuM\nOcdXh+7SHK6S/JDEujYrwBe58YEAqji6wY7y8NRqs9zsXPPnxlxj1kin3NqPH4Ud\nNpRKjhslLc3svNmM5+MBJCU=\n-----END PRIVATE KEY-----\n",
-  "client_email": "crop-production@crop-production-project.iam.gserviceaccount.com",
-  "client_id": "106279903865923246414",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/crop-production%40crop-production-project.iam.gserviceaccount.com",
-  "universe_domain": "googleapis.com"
-}
+
